@@ -27,7 +27,7 @@ private val retrofit = Retrofit.Builder()
 
 interface BreakingBadApiService {
     @GET("random")
-   suspend fun getRandomCharacter() : Character
+   suspend fun getRandomCharacter() : List<CharacterItem>
 }
 
 //singleton object for the API service
