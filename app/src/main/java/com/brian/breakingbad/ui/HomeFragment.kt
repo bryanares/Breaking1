@@ -31,6 +31,9 @@ class HomeFragment : Fragment() {
         Picasso.get().load(character?.get(0)?.img).into(binding.bBadImageView)
         binding.bBadName.text = character?.get(0)?.name.toString()
         binding.bBadNickname.text = character?.get(0)?.nickname.toString()
+        binding.bBadOccupation.text = character?.get(0)?.occupation?.get(0).toString()
+        binding.bBadActor.text = character?.get(0)?.portrayed.toString()
+        binding.bBadBirthday.text = character?.get(0)?.birthday.toString()
 
 
         binding.refreshButton.setOnClickListener {
@@ -38,11 +41,20 @@ class HomeFragment : Fragment() {
             try {
 
                 for (i in character?.indices!!) {
-                    Picasso.get().load(viewModel.getCharacter().value?.get(i)?.img).into(binding.bBadImageView)
+                    Picasso.get().load(viewModel.getCharacter().value?.get(i)?.img)
+                        .into(binding.bBadImageView)
                     binding.bBadName.text = viewModel.getCharacter().value?.get(i)?.name.toString()
-                    binding.bBadNickname.text = viewModel.getCharacter().value?.get(i)?.nickname.toString()
+                    binding.bBadNickname.text =
+                        viewModel.getCharacter().value?.get(i)?.nickname.toString()
+                    binding.bBadOccupation.text =
+                        viewModel.getCharacter().value?.get(i)?.occupation?.get(i).toString()
+                    binding.bBadActor.text =
+                        viewModel.getCharacter().value?.get(i)?.portrayed.toString()
+                    binding.bBadBirthday.text =
+                        viewModel.getCharacter().value?.get(i)?.birthday.toString()
 
-                    Log.d("HomeFragment",
+                    Log.d(
+                        "HomeFragment",
                         viewModel.getCharacter().value?.get(i)?.nickname.toString()
                     )
                 }
