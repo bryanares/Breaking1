@@ -14,7 +14,7 @@ import com.brian.breakingbad.databinding.FragmentHomeBinding
 import com.squareup.picasso.Picasso
 
 class HomeFragment : Fragment() {
-    private val viewModel :BreakingBadViewModel by activityViewModels()
+    private val viewModel: BreakingBadViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,36 +24,33 @@ class HomeFragment : Fragment() {
 
         viewModel.getCharacter()
 
-        val characterList = viewModel.getCharacter()
-        var character = ""
-
-
-        for (i in characterList.value!!){
-            character = i.toString()
-        }
+        var character = viewModel.getCharacter().value
 
         binding.lifecycleOwner = this
 
-//        Picasso.get().load(character?.img).into(binding.bBadImageView)
-        binding.bBadName.text = character?.name
-        binding.bBadNickname.text = character?.nickname
+        Picasso.get().load(character?.get(0)?.img).into(binding.bBadImageView)
+        binding.bBadName.text = character?.get(0)?.name.toString()
+        binding.bBadNickname.text = character?.get(0)?.nickname.toString()
 
 
         binding.refreshButton.setOnClickListener {
 
             try {
-                Toast.makeText(context, "Refreshed", Toast.LENGTH_LONG).show()
-//                Picasso.get().load(character?.img).into(binding.bBadImageView)
-                binding.bBadName.text = character?.name
-                binding.bBadNickname.text = character?.nickname.toString()
-                Log.d("Try Block", character?.nickname.toString())
-            }catch (e: Exception){
+
+                for (i in character?.indices!!) {
+                    Picasso.get().load(viewModel.getCharacter().value?.get(i)?.img).into(binding.bBadImageView)
+                    binding.bBadName.text = viewModel.getCharacter().value?.get(i)?.name.toString()
+                    binding.bBadNickname.text = viewModel.getCharacter().value?.get(i)?.nickname.toString()
+
+                    Log.d("HomeFragment",
+                        viewModel.getCharacter().value?.get(i)?.nickname.toString()
+                    )
+                }
+
+            } catch (e: Exception) {
                 Log.e("HomeFragment", e.toString())
             }
-
-
         }
-
         val view = binding.root
         return view
     }
