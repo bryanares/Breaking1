@@ -115,6 +115,23 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
+                            android:text="Shows: "
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            />
+
+                        <TextView
+                            android:id="@+id/bBadAppearance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="?android:attr/textColorSecondary"
+                            tools:text="Text3" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
                             android:text="Portrayed By: "
                             android:fontFamily="@font/poppins_semibold"
                             android:textAppearance="?attr/textAppearanceHeadline6"
