@@ -35,6 +35,7 @@ class HomeFragment : Fragment() {
         binding.bBadActor.text = character?.get(0)?.portrayed.toString()
         binding.bBadBirthday.text = character?.get(0)?.birthday.toString()
         binding.bBadStatus.text = character?.get(0)?.status.toString()
+        binding.bBadAppearance.text = character?.get(0)?.category.toString()
 
 
         binding.refreshButton.setOnClickListener {
@@ -55,6 +56,8 @@ class HomeFragment : Fragment() {
                         viewModel.getCharacter().value?.get(i)?.birthday.toString()
                     binding.bBadStatus.text =
                         viewModel.getCharacter().value?.get(i)?.status.toString()
+                    binding.bBadAppearance.text =
+                        viewModel.getCharacter().value?.get(i)?.category.toString()
 
                     Log.d(
                         "HomeFragment",
