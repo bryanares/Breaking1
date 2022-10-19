@@ -63,20 +63,6 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semibold"
                             tools:text="Title" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Birthday: "
-                            android:layout_marginTop="8dp"
-                            android:fontFamily="@font/poppins_semibold"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            />
-                        <TextView
-                            android:id="@+id/bBadBirthday"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_semibold"
-                            tools:text="Title" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -105,57 +91,6 @@
 
                         <TextView
                             android:id="@+id/bBadOccupation"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            tools:text="Text3" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Shows: "
-                            android:fontFamily="@font/poppins_semibold"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            />
-
-                        <TextView
-                            android:id="@+id/bBadAppearance"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            tools:text="Text3" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Portrayed By: "
-                            android:fontFamily="@font/poppins_semibold"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            />
-
-                        <TextView
-                            android:id="@+id/bBadActor"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            tools:text="Text3" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Status: "
-                            android:fontFamily="@font/poppins_semibold"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            />
-
-                        <TextView
-                            android:id="@+id/bBadStatus"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins"
