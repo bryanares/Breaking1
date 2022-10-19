@@ -14,12 +14,12 @@ class BreakingBadViewModel : ViewModel() {
 
 
 
-    private val _character = MutableLiveData<List<CharacterItem>>()
-    val character : LiveData<List<CharacterItem>> get() = _character
+    private val _character = MutableLiveData<MutableList<CharacterItem>>()
+    val character : LiveData<MutableList<CharacterItem>> get() = _character
 
 
 
-    fun getCharacter(): MutableLiveData<List<CharacterItem>>{
+    fun getCharacter(): MutableLiveData<MutableList<CharacterItem>>{
         viewModelScope.launch {
 
             try {
